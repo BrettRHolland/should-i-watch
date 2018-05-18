@@ -1,0 +1,99 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require reset
+ *= require flexboxgrid.min
+ *= require_self
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,600,700');
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 0 30px;
+}
+
+header {
+  background-color: #000;
+  margin-bottom: 30px;
+}
+
+.nav {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  height: 80px;
+  line-height: 80px;
+  text-transform: uppercase;
+  .i {
+    color: #fff;
+  }
+  .watch {
+    color: #96e6a1;
+  }
+}
+
+.box {
+  cursor: pointer;
+  margin-bottom: 30px;
+  position: relative;
+  img {
+    border: 10px solid #222222;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.yes {
+  border: 10px solid transparent;
+  border-image-source: linear-gradient(#b3ffab, #12fff7);
+  border-image-slice: 20;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.65s ease;
+  background-color: #000;
+}
+
+.box:hover .yes {
+  opacity: 0.8;
+}
+
+.text {
+  color: white;
+  font-size: 10rem;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}

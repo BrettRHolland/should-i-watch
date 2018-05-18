@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<p>
+  <%= image_tag @movie.image %>
+</p>
 
 <p>
   <strong>Title:</strong>
@@ -25,5 +27,6 @@
   <%= @movie.rating %>
 </p>
 
-<%= link_to 'Edit', edit_movie_path(@movie) %> |
+<%= link_to 'Edit', edit_movie_path(@movie) %>
+|
 <%= link_to 'Back', movies_path %>

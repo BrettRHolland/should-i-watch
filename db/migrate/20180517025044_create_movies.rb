@@ -6,6 +6,7 @@ class CreateMovies < ActiveRecord::Migration[5.1]
       t.integer :movie_length, null: false
       t.string :director
       t.string :rating
+      t.string :url, null: false
 
       t.timestamps
     end
