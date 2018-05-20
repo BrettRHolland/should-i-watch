@@ -9,14 +9,14 @@ require 'faker'
 
 10.times do
 
-
 Movie.create(
   title: "Black Panther",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tristique fringilla purus eget feugiat. Sed tortor eros, faucibus sed sollicitudin sit amet, pretium eu massa. Mauris id sapien at tellus sodales convallis accumsan vitae libero. Aliquam massa est, rutrum sed auctor in, eleifend in sem. Fusce semper consectetur lectus, tincidunt euismod quam interdum nec. Cras sodales augue quam, et malesuada eros luctus eu.",
   movie_length: 115,
   director: Faker::Name.name,
   rating: 'PG-13',
-  url: 'black_panther.jpg'
+  url: 'black_panther.jpg',
+  watch: true
 )
 
 Movie.create(
@@ -25,7 +25,8 @@ Movie.create(
   movie_length: 115,
   director: Faker::Name.name,
   rating: 'PG-13',
-  url: 'rampage.jpg'
+  url: 'rampage.jpg',
+  watch: false
 )
 
 Movie.create(
@@ -34,7 +35,8 @@ Movie.create(
   movie_length: 115,
   director: Faker::Name.name,
   rating: 'PG-13',
-  url: 'a_quiet_place.jpg'
+  url: 'a_quiet_place.jpg',
+  watch: true
 )
 
 Movie.create(
@@ -43,7 +45,8 @@ Movie.create(
   movie_length: 115,
   director: Faker::Name.name,
   rating: 'PG-13',
-  url: 'logan.jpg'
+  url: 'logan.jpg',
+  watch: true
 )
 
 end

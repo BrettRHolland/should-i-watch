@@ -7,6 +7,7 @@ class CreateMovies < ActiveRecord::Migration[5.1]
       t.string :director
       t.string :rating
       t.string :url, null: false
+      t.boolean :watch
 
       t.timestamps
     end

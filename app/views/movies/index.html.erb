@@ -5,9 +5,13 @@
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <div class="box">
         <%= image_tag movie.url %>
-        <div class="yes">
+        <div class=<%= movie.watch %>>
           <div class="text">
-            <i class="far fa-check-circle"></i>
+            <% if movie.watch == true %>
+              <i class="far fa-check-circle"></i>
+            <% else %>
+              <i class="far fa-times-circle"></i>
+            <% end %>
           </div>
         </div>
       </div>

@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2018_05_17_150715) do
     t.string "director"
     t.string "rating"
     t.string "url", null: false
+    t.boolean "watch"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -40,13 +40,16 @@ header {
 
 .nav {
   color: #fff;
+  background: -webkit-linear-gradient(#b3ffab, #12fff7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   height: 80px;
   line-height: 80px;
   text-transform: uppercase;
-  .i {
+  i {
     color: #fff;
   }
   .watch {
@@ -64,9 +67,15 @@ header {
     width: 100%;
     height: auto;
   }
+  &:hover {
+    .true,
+    .false {
+      opacity: 0.8;
+    }
+  }
 }
 
-.yes {
+.true {
   border: 10px solid transparent;
   border-image-source: linear-gradient(#b3ffab, #12fff7);
   border-image-slice: 20;
@@ -80,15 +89,39 @@ header {
   opacity: 0;
   transition: 0.65s ease;
   background-color: #000;
+  i {
+    font-size: 10rem;
+    background: -webkit-linear-gradient(#b3ffab, #12fff7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
-.box:hover .yes {
-  opacity: 0.8;
+.false {
+  border: 10px solid transparent;
+  border-image-source: linear-gradient(#ff0844, #ffb199);
+  border-image-slice: 20;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.65s ease;
+  background-color: #000;
+  i {
+    font-size: 10rem;
+    background: -webkit-linear-gradient(#ff0844, #ffb199);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .text {
   color: white;
-  font-size: 10rem;
+  font-size: 1rem;
   font-weight: 700;
   position: absolute;
   top: 50%;
