@@ -18,10 +18,26 @@
             <div class="nav">Should<span class="i">I</span><span class="watch">Watch</span>?</div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-xs-8 col-sm-8 col-md-10 col-lg-10">
+            <%= form_tag(movies_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Which movie do you want to watch?" %></div>
+          <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+            <%= submit_tag "Search", :name => nil %>
+          <% end %>
+        </div>
       </div>
-    </header>
-    <div class="container">
-      <%= yield %>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="all">
+            <a href="#browse">or view all movies</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </body>
+  </header>
+  <div class="container">
+    <%= yield %>
+  </div>
+</body>
 </html>
